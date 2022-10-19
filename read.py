@@ -8,11 +8,11 @@ import cv2 as cv #Imports cv
 #Reading Photos
 capture = cv.VideoCapture('Videos/dog.mp4') #Path of dog video or use 0 to access your first camera on computer/laptop
 
-while True:
+while True: #While loop
   isTrue, frame = capture.read() #Capture to video
   cv.imshow('Dog Video', frame)
 
-  if cv.waitKey(20) & 0xFF==ord('d'): #Run the video until it ends
+  if cv.waitKey(20) & 0xFF==ord('d'): #Run the video until it ends or D key pressed
     break
 
 capture.release()
